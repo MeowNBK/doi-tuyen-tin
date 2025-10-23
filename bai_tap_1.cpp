@@ -4,7 +4,7 @@ using namespace std;
 
 #define ll long long
 #define endl '\n'
-#define EPSILON 1e-9
+#define EPSILON 1e-6
 #define MEOW_PI 3.141592654
 
 template <typename...Args>
@@ -43,6 +43,18 @@ inline array<double, 3> calculate(double a, double b, double c) noexcept {
     return array<double, 3>{ A, B, C };
 }
 
+inline bool is_equal(double x, double y) noexcept {
+    double diff = x - y;
+    return abs(diff) < EPSILON;
+}
+
+inline bool is_equal(initializer_list<double> choices, double x) noexcept {
+    for (auto c : choices) {
+        if (is_equal(c, x)) return true;
+    }
+    return false;
+}
+
 int main() {
     double a, b, c;
     double A, B, C;
@@ -50,14 +62,23 @@ int main() {
 
     // Tim xem day la tam giac gi: thuong, vuong, can
 
-    double canh_lon_nhat = max(max(a, b), c);
-
     auto result = calculate(a, b, c);
     A = result[0];
     B = result[1];
     C = result[2];
 
-    // printl(a, ' ', b, ' ', c);
-    // printl(A, ' ', B, ' ', C);
+    if ((a+b>c)&&(b+c>a)&&(a+c>b)) {
+        if (is_equal({A, B, C}, 90.0)) {
+            printl("Day la tam giac vuong");
+        } else if (is_equal(a, b) && is_equal(b, c)) {
+            printl("Day la tam giac deu");
+        } else if (is_equal(a, b) || is_equal(b, c) || is_equal(c, a)) {
+            printl("Day la tam giac can");
+        } else {
+            printl("Day la tam giac thuong");
+        }
+    } else {
+        printl("Day khong phai tam giac");
+    }
     return 0;
 }
