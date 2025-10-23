@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <windows.h>
 
 using namespace std;
 
@@ -55,30 +56,48 @@ inline bool is_equal(initializer_list<double> choices, double x) noexcept {
     return false;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+    SetConsoleOutputCP(65001);
+    SetConsoleCP(65001);
+
+    ios::sync_with_stdio(false);
+
+    if (argc < 2) {
+        printl("Cần ít nhất 2 đối số");
+        return 42;
+    }
+
+    ifstream fin(argv[1]);
+
     double a, b, c;
     double A, B, C;
-    cin >> a >> b >> c;
 
-    // Tim xem day la tam giac gi: thuong, vuong, can
+    int n;
 
-    auto result = calculate(a, b, c);
-    A = result[0];
-    B = result[1];
-    C = result[2];
+    fin >> n;
 
-    if ((a+b>c)&&(b+c>a)&&(a+c>b)) {
-        if (is_equal({A, B, C}, 90.0)) {
-            printl("Day la tam giac vuong");
-        } else if (is_equal(a, b) && is_equal(b, c)) {
-            printl("Day la tam giac deu");
-        } else if (is_equal(a, b) || is_equal(b, c) || is_equal(c, a)) {
-            printl("Day la tam giac can");
+    while (n--) {
+        fin >> a >> b >> c;
+
+        auto result = calculate(a, b, c);
+        A = result[0];
+        B = result[1];
+        C = result[2];
+
+        if ((a + b > c) && (b + c > a) && (a + c > b)) {
+            if (is_equal({A, B, C}, 90.0)) {
+                printl("Đây là tam giác vuông");
+            } else if (is_equal(a, b) && is_equal(b, c)) {
+                printl("Đây là tam giác đều");
+            } else if (is_equal(a, b) || is_equal(b, c) || is_equal(c, a)) {
+                printl("Đây là tam giác cân");
+            } else {
+                printl("Đây là tam giác thường");
+            }
         } else {
-            printl("Day la tam giac thuong");
+            printl("Đây không phải là tam giác");
         }
-    } else {
-        printl("Day khong phai tam giac");
     }
+
     return 0;
 }
