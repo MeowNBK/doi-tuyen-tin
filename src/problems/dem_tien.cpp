@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include <windows.h>
+#include "libs/console.h"
 
 using namespace std;
 
@@ -18,9 +18,8 @@ inline ll count(ll m) noexcept {
 }
 
 int main() {
-	SetConsoleOutputCP(65001);
-	SetConsoleCP(65001);
-	
+	meow::set_utf8();
+
 	ll n;
 	cout << "Nhập số tiền: ";
 	cin >> n;

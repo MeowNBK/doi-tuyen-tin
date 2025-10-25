@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include <windows.h>
+#include "libs/console.h"
 
 using namespace std;
 
@@ -57,8 +57,7 @@ inline bool is_equal(initializer_list<double> choices, double x) noexcept {
 }
 
 int main(int argc, char* argv[]) {
-    SetConsoleOutputCP(65001);
-    SetConsoleCP(65001);
+    meow::set_utf8();
 
     ios::sync_with_stdio(false);
 
