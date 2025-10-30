@@ -4,7 +4,7 @@
 #endif
 using namespace std;
 
-// --- Định nghĩa kiểu ---
+// --- Định nghĩa kiểu nhanh ---
 using ll = long long;
 using ull = unsigned long long;
 using vi = vector<int>;
@@ -12,7 +12,7 @@ using vll = vector<ll>;
 using pii = pair<int, int>;
 using pll = pair<ll, ll>;
 
-// --- Kiểu số nguyên ---
+// --- Kiểu số nguyên kích thước cố định---
 using i32 = int32_t;
 using i64 = int64_t;
 using u32 = uint32_t;
@@ -20,17 +20,19 @@ using u64 = uint64_t;
 using f32 = float;
 using f64 = double;
 
-// --- Macro tiện ích ---
+// --- Macro tiện ích ngắn gọn ---
 #define ALL(x) (x).begin(), (x).end()
 #define RALL(x) (x).rbegin(), (x).rend()
 #define PB push_back
 #define RS reserve
 
-// --- Macro vòng lặp ---
+// --- Macro cho vòng lặp ---
 #define rep(i, a, b) for (int i = (a); i < (b); ++i)
 #define rep0(i, n) for (int i = 0; i < (n); ++i)
 
-// --- Hàm trợ giúp ---
+// --- Các hàm trợ giúp ---
+
+// ===== Các hàm in =====
 template <typename...Args>
 inline void print(Args&&...args) noexcept {
     (cout << ... << args);
@@ -42,23 +44,45 @@ inline void printl(Args&&...args) noexcept {
     cout << '\n';
 }
 
-template <typename T>
-inline bool is_equal(T&& value, initializer_list<T> options) noexcept {
-    for (const T& option : options) {
+// template <typename T>
+// inline bool is_equal(T&& value, initializer_list<T> options) noexcept {
+//     for (const T& option : options) {
+//         if (value == option) return true;
+//     }
+//     return false;
+// }
+
+// ===== Các hàm so sánh ==== 
+inline bool is_equal(i32 value, initializer_list<i32> options) noexcept {
+    for (i32 option : options) {
         if (value == option) return true;
     }
     return false;
 }
 
-inline bool is_equal(f32 a, f32 b, float eps = 1e-6) noexcept {
+inline bool is_equal(i64 value, initializer_list<i64> options) noexcept {
+    for (i64 option : options) {
+        if (value == option) return true;
+    }
+    return false;
+}
+
+inline bool is_equal(u64 value, initializer_list<u64> options) noexcept {
+    for (u64 option : options) {
+        if (value == option) return true;
+    }
+    return false;
+}
+
+inline bool is_equal(f32 a, f32 b, f32 eps = 1e-6) noexcept {
     return fabs(a - b) <= eps * max({ f32(1.0), fabs(a), fabs(b) });
 }
 
-inline bool is_equal(f64 a, f64 b, double eps = 1e-9) noexcept {
+inline bool is_equal(f64 a, f64 b, f64 eps = 1e-9) noexcept {
     return fabs(a - b) <= eps * max({ 1.0, fabs(a), fabs(b) });
 }
 
-// --- IO và Encoding
+// --- IO và Encoding ---
 inline void set_io(string name = "") noexcept {
     ios::sync_with_stdio(false);
     // cin.tie(nullptr);
@@ -66,6 +90,8 @@ inline void set_io(string name = "") noexcept {
     if (!name.empty()) {
         freopen((name + ".inp").c_str(), "r", stdin);
         freopen((name + ".out").c_str(), "w", stdout);
+
+        cin.tie(nullptr);
     }
 }
 
@@ -76,27 +102,83 @@ inline void set_utf8() noexcept {
     #endif
 }
 
-// --- Lớp tiện ích --- 
-struct Timer {
-    string msg;
-    chrono::high_resolution_clock::time_point start;
-    bool timer_on;
-    Timer(string m = "Exec time: ", bool on = true) noexcept : msg(std::move(m)), start(chrono::high_resolution_clock::now()), timer_on(on) {}
+// --- Các Lớp tiện ích --- 
+class Timer {
+private:
+    using clock_t = chrono::high_resolution_clock;
+
+    string message_;
+    clock_t::time_point start_;
+    bool timer_on_;
+public:
+    Timer(string message = "Exec time: ", bool timer_on = true) noexcept : message_(std::move(message)), start_(clock_t::now()), timer_on_(timer_on) {}
+    Timer(const Timer& other) noexcept : message_(other.message_), start_(other.start_), timer_on_(other.timer_on_) {}
+    Timer(Timer&& other) noexcept : message_(std::move(other.message_)), start_(std::move(other.start_)), timer_on_(std::move(other.timer_on_)) {}
+    inline Timer& operator=(const Timer& other) noexcept {
+        if (this == &other) return *this;
+        message_ = other.message_;
+        start_ = other.start_;
+        timer_on_ = other.timer_on_;
+        return *this;
+    }
+    inline Timer& operator=(Timer&& other) noexcept {
+        if (this == &other) return *this;
+        message_ = other.message_;
+        start_ = other.start_;
+        timer_on_ = other.timer_on_;
+
+        other.message_ = "";
+        other.start_ = {};
+        other.timer_on_ = false;
+        return *this;
+    }
     ~Timer() noexcept {
-        if (timer_on) printl(msg, sinc(), "ms");
+        if (timer_on_) log();
     }
 
-    inline double sinc() noexcept {
-        auto end = chrono::high_resolution_clock::now();
-        chrono::duration<double, milli> duration = end - start;
+    inline double elapsed() noexcept {
+        auto end = clock_t::now();
+        chrono::duration<double, milli> duration = end - start_;
 
         return duration.count();
+    }
+
+    inline const char* unit(double& value) noexcept {
+        if (value >= 1.0) return "ms";
+        value *= 1000.0;
+        if (value >= 1.0) return "µs";
+        value *= 1000.0;
+        return "ns";
+    }
+
+    inline const char* explain_unit(const char* u) {
+        if (strcmp(u, "ms") == 0) return "(1ms = 1/10^3 s)";
+        if (strcmp(u, "µs") == 0) return "(1µs = 1/10^6 s)";
+        if (strcmp(u, "ns") == 0) return "(1ns = 1/10^9 s)";
+        return "";
+    }
+
+    inline void log() noexcept {
+        double value = elapsed();
+        const char* time_unit = unit(value);
+
+        printl(message_, fixed, setprecision(3), value, time_unit, ' ', explain_unit(time_unit));
+    }
+
+    inline void stop() noexcept {
+        if (timer_on_) {
+            log();
+            timer_on_ = false;
+        }
+    }
+
+    inline void reset() noexcept {
+        start_ = clock_t::now();
     }
 };
 
 class boolarray {
 public:
-    // --- Constructor ---
     boolarray(size_t size, bool init_value = false) noexcept : data_(nullptr), mask_nums_(0), size_(size) {
         grow(size);
         fill(init_value);
@@ -133,15 +215,11 @@ public:
     }
     ~boolarray() noexcept { delete[] data_; }
 
-    // --- Boolean access ---
-
-    /// @brief Unchecked boolean access, for performance-critical code
     [[nodiscard]] inline bool get(size_t bit_number) const noexcept {
         size_t index = bit_number / 64;
         size_t bit_pos = bit_number % 64;
         return ((data_[index]) & (1ULL << bit_pos)) != 0;
     }
-    /// @brief Unchecked boolean modification, for performance-critical code
     inline void set(size_t bit_number, bool value) noexcept {
         size_t index = bit_number / 64;
         size_t bit_pos = bit_number % 64;
@@ -153,7 +231,6 @@ public:
         return get(index);
     }
 
-    // --- Modifiers ---
     inline void fill(bool value) noexcept {
         for (size_t i = 0; i < mask_nums_; ++i) {
             data_[i] = value ? -1ULL : 0ULL;
@@ -182,6 +259,7 @@ private:
     size_t size_;
 };
 
+// --- Phần code chính ---
 inline boolarray sieve(ll n) noexcept {
     boolarray a(n + 1, true);
     a.set(0, false);
