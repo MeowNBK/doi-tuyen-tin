@@ -14,7 +14,7 @@ using ll = long long;
 class boolarray {
 public:
     // --- Constructor ---
-    boolarray(size_t size, bool init_value = false) noexcept : data_(nullptr), size_(size) {
+    boolarray(size_t size, bool init_value = false) noexcept : data_(nullptr), mask_nums_(0), size_(size) {
         grow(size);
         fill(init_value);
     }
@@ -78,16 +78,20 @@ public:
     }
 private:
     inline void grow(size_t new_size) noexcept {
+        size_t old_mask = mask_nums_;
         mask_nums_ = (new_size + 63) >> 6;
+
         if (mask_nums_ < 1) mask_nums_ = 1;
-        uint64_t* temp_data = new uint64_t[mask_nums_];
+        uint64_t* temp = new uint64_t[mask_nums_];
         if (data_) {
-            for (size_t i = 0; i < mask_nums_; ++i) {
-                temp_data[i] = data_[i];
-            }
+            size_t to_copy = min(mask_nums_, old_mask);
+            for (size_t i = 0; i < to_copy; ++i) temp[i] = data_[i];
+            for (size_t i = to_copy; i < mask_nums_; ++i) temp[i] = 0ULL;
             delete[] data_;
+        } else {
+            for (size_t i = 0; i < mask_nums_; ++i) temp[i] = 0ULL;
         }
-        data_ = temp_data;
+        data_ = temp;
     }
 
     uint64_t* data_;
