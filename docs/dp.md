@@ -1,5 +1,3 @@
-
-
 # **Báo Cáo Chuyên Sâu: Chinh Phục Toán Tổ Hợp và Quy Hoạch Động trong Lập Trình Thi Đấu C++**
 
 ## **Phần I: Nền Tảng Toán Tổ Hợp Cho Lập Trình Thi Đấu**
@@ -631,53 +629,3 @@ Lộ trình luyện tập chuyên sâu:
      * **DP trên cây:** Bắt đầu với các bài toán cơ bản như tìm đường đi dài nhất, tập độc lập lớn nhất trên VNOI, CSES.  
      * **Digit DP:** Luyện tập các bài toán đếm số trong khoảng trên SPOJ, Codeforces.  
    * **Nền tảng:** VNOI Wiki (có danh sách bài tập cho từng chuyên đề), các contest trên Codeforces và AtCoder.
-
-Việc hiểu sâu bản chất toán học đằng sau mỗi thuật toán sẽ giúp bạn không chỉ giải được các bài toán đã biết mà còn có khả năng sáng tạo ra lời giải cho những vấn đề mới. Hãy kiên trì, thực hành thường xuyên, và luôn cố gắng phân tích bài toán từ những nguyên lý cơ bản nhất.
-
-#### **Nguồn trích dẫn**
-
-1. Hoán vị, chỉnh hợp và tổ hợp lớp 10 (Lý thuyết Toán 10 Kết nối tri ..., truy cập vào tháng 10 29, 2025, [https://vietjack.com/toan-10-kn/ly-thuyet-bai-24-hoan-vi-chinh-hop-va-to-hop.jsp](https://vietjack.com/toan-10-kn/ly-thuyet-bai-24-hoan-vi-chinh-hop-va-to-hop.jsp)  
-2. Lý thuyết Hoán vị \- Chỉnh hợp \- Tổ hợp | SGK Toán lớp 11 \- Loigiaihay.com, truy cập vào tháng 10 29, 2025, [https://loigiaihay.com/ly-thuyet-hoan-vi-chinh-hop-to-hop-c46a4081.html](https://loigiaihay.com/ly-thuyet-hoan-vi-chinh-hop-to-hop-c46a4081.html)  
-3. Hoán vị, chỉnh hợp và tổ hợp lớp 10 (Lý thuyết Toán 10 Chân trời sáng tạo) \- VietJack, truy cập vào tháng 10 29, 2025, [https://vietjack.com/toan-10-ct/ly-thuyet-bai-2-hoan-vi-chinh-hop-va-to-hop.jsp](https://vietjack.com/toan-10-ct/ly-thuyet-bai-2-hoan-vi-chinh-hop-va-to-hop.jsp)  
-4. Hoán Vị \- Chỉnh Hợp \- Tổ Hợp: Công Thức Và Bài Tập \- Vuihoc.vn, truy cập vào tháng 10 29, 2025, [https://vuihoc.vn/tin/thpt-hoan-vi-chinh-hop-to-hop-505.html](https://vuihoc.vn/tin/thpt-hoan-vi-chinh-hop-to-hop-505.html)  
-5. \[Kiến Thức Toán 11\] Phân Biệt Chỉnh Hợp Và Tổ Hợp Dễ Hiểu \- Timviec365, truy cập vào tháng 10 29, 2025, [https://timviec365.vn/blog/chinh-hop-va-to-hop-new14350.html](https://timviec365.vn/blog/chinh-hop-va-to-hop-new14350.html)  
-6. QBHV \- Hoán vị chữ cái \- VietCodes, truy cập vào tháng 10 29, 2025, [https://vietcodes.github.io/code/59/](https://vietcodes.github.io/code/59/)  
-7. Cách tính nCk | VNOI Wiki, truy cập vào tháng 10 29, 2025, [https://wiki.vnoi.info/algo/algebra/nCk](https://wiki.vnoi.info/algo/algebra/nCk)  
-8. Nhập môn Quy hoạch động \- Viblo, truy cập vào tháng 10 29, 2025, [https://viblo.asia/p/nhap-mon-quy-hoach-dong-bWrZnoRQlxw](https://viblo.asia/p/nhap-mon-quy-hoach-dong-bWrZnoRQlxw)  
-9. Bài 1.5. Quy hoạch động | PDF \- Scribd, truy cập vào tháng 10 29, 2025, [https://www.scribd.com/document/931103593/Bai-1-5-Quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng](https://www.scribd.com/document/931103593/Bai-1-5-Quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng)  
-10. Quy hoạch động là gì? Tìm hiểu chi tiết về thuật toán ... \- FPT Aptech, truy cập vào tháng 10 29, 2025, [https://aptech.fpt.edu.vn/quy-hoach-dong.html](https://aptech.fpt.edu.vn/quy-hoach-dong.html)  
-11. Quy Hoạch Động \- Một Thuật Toán Thần Thánh \- Viblo, truy cập vào tháng 10 29, 2025, [https://viblo.asia/p/quy-hoach-dong-mot-thuat-toan-than-thanh-E375zy01lGW](https://viblo.asia/p/quy-hoach-dong-mot-thuat-toan-than-thanh-E375zy01lGW)  
-12. Quy hoạch động cho người mới bắt đầu (Phần 3\) \- Sử dụng vòng lặp for truy vết, truy cập vào tháng 10 29, 2025, [https://codedream.edu.vn/quy-hoach-dong-cho-nguoi-moi-bat-dau-phan-3/](https://codedream.edu.vn/quy-hoach-dong-cho-nguoi-moi-bat-dau-phan-3/)  
-13. Top-down (Memoization) vs Bottom-up (Tabulation) approach in DP, truy cập vào tháng 10 29, 2025, [https://www.enjoyalgorithms.com/blog/top-down-memoization-vs-bottom-up-tabulation/](https://www.enjoyalgorithms.com/blog/top-down-memoization-vs-bottom-up-tabulation/)  
-14. Basics of Memoization and Tabulation | by Rajat Sharma | The Pythoneers | Medium, truy cập vào tháng 10 29, 2025, [https://medium.com/pythoneers/basics-of-memoization-and-tabulation-fd987be7ecdd](https://medium.com/pythoneers/basics-of-memoization-and-tabulation-fd987be7ecdd)  
-15. When to Use Memoization vs Tabulation: A Comprehensive Guide – AlgoCademy Blog, truy cập vào tháng 10 29, 2025, [https://algocademy.com/blog/when-to-use-memoization-vs-tabulation-a-comprehensive-guide/](https://algocademy.com/blog/when-to-use-memoization-vs-tabulation-a-comprehensive-guide/)  
-16. dynamic programming \- What is the difference between bottom-up and top-down?, truy cập vào tháng 10 29, 2025, [https://stackoverflow.com/questions/6164629/what-is-the-difference-between-bottom-up-and-top-down](https://stackoverflow.com/questions/6164629/what-is-the-difference-between-bottom-up-and-top-down)  
-17. Tabulation vs. Memoization | Baeldung on Computer Science, truy cập vào tháng 10 29, 2025, [https://www.baeldung.com/cs/tabulation-vs-memoization](https://www.baeldung.com/cs/tabulation-vs-memoization)  
-18. When to use bottom up DP and top down DP? : r/leetcode \- Reddit, truy cập vào tháng 10 29, 2025, [https://www.reddit.com/r/leetcode/comments/164tz2c/when\_to\_use\_bottom\_up\_dp\_and\_top\_down\_dp/](https://www.reddit.com/r/leetcode/comments/164tz2c/when_to_use_bottom_up_dp_and_top_down_dp/)  
-19. Quy hoạch động Bitmask \- Viblo, truy cập vào tháng 10 29, 2025, [https://viblo.asia/p/quy-hoach-dong-bitmask-Yym40r85L91](https://viblo.asia/p/quy-hoach-dong-bitmask-Yym40r85L91)  
-20. Nhập môn quy hoạch động \- VNOJ: VNOI Online Judge, truy cập vào tháng 10 29, 2025, [https://csp.vnoi.info/post/22-nmdc](https://csp.vnoi.info/post/22-nmdc)  
-21. Đề tài Bài toán đổi tiền (Quy hoạch động) \- Luận văn, đồ án, đề tài ..., truy cập vào tháng 10 29, 2025, [https://luanvan.net.vn/luan-van/de-tai-bai-toan-doi-tien-quy-hoach-dong-29357/](https://luanvan.net.vn/luan-van/de-tai-bai-toan-doi-tien-quy-hoach-dong-29357/)  
-22. Tính toán tổ hợp – HỌC, HỌC NỮA, HỌC MÃI\!, truy cập vào tháng 10 29, 2025, [https://hayashikita.wordpress.com/2012/04/02/tinh-toan-t%E1%BB%95-h%E1%BB%A3p/](https://hayashikita.wordpress.com/2012/04/02/tinh-toan-t%E1%BB%95-h%E1%BB%A3p/)  
-23. Quy hoạch động (Dynamic programming) \- Vallicon, truy cập vào tháng 10 29, 2025, [https://vallicon.com/post/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng-(dynamic-programming)-bAPoYM6ELm6](https://vallicon.com/post/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng-\(dynamic-programming\)-bAPoYM6ELm6)  
-24. Types of Problems Solved Using Dynamic Programming \- EnjoyAlgorithms, truy cập vào tháng 10 29, 2025, [https://www.enjoyalgorithms.com/blog/what-common-problems-solved-using-dynamic-programming/](https://www.enjoyalgorithms.com/blog/what-common-problems-solved-using-dynamic-programming/)  
-25. www.iarcs.org.in, truy cập vào tháng 10 29, 2025, [https://www.iarcs.org.in/inoi/online-study-material/topics/dp-grid-paths.php](https://www.iarcs.org.in/inoi/online-study-material/topics/dp-grid-paths.php)  
-26. Paths on Grids \- USACO Guide, truy cập vào tháng 10 29, 2025, [https://usaco.guide/gold/paths-grids](https://usaco.guide/gold/paths-grids)  
-27. Common Errors in Counting Problems \- ResearchGate, truy cập vào tháng 10 29, 2025, [https://www.researchgate.net/publication/348334635\_Common\_Errors\_in\_Counting\_Problems](https://www.researchgate.net/publication/348334635_Common_Errors_in_Counting_Problems)  
-28. dynamic programming task / counting problem \- Stack Overflow, truy cập vào tháng 10 29, 2025, [https://stackoverflow.com/questions/18110870/dynamic-programming-task-counting-problem](https://stackoverflow.com/questions/18110870/dynamic-programming-task-counting-problem)  
-29. Can counting problems have optimal substructure? \- Computer Science Stack Exchange, truy cập vào tháng 10 29, 2025, [https://cs.stackexchange.com/questions/79664/can-counting-problems-have-optimal-substructure](https://cs.stackexchange.com/questions/79664/can-counting-problems-have-optimal-substructure)  
-30. Dynamic Programming (DP) on Grids \- GeeksforGeeks, truy cập vào tháng 10 29, 2025, [https://www.geeksforgeeks.org/competitive-programming/dp-on-grids/](https://www.geeksforgeeks.org/competitive-programming/dp-on-grids/)  
-31. Một số bài toán quy hoạch động điển hình \- VNOI Wiki, truy cập vào tháng 10 29, 2025, [https://wiki.vnoi.info/algo/dp/basic-problems](https://wiki.vnoi.info/algo/dp/basic-problems)  
-32. Coin Change \- Count Ways to Make Sum \- GeeksforGeeks, truy cập vào tháng 10 29, 2025, [https://www.geeksforgeeks.org/coin-change-dp-7/](https://www.geeksforgeeks.org/coin-change-dp-7/)  
-33. Bài Toán Chia Kẹo Euler \- BITEXEDU, truy cập vào tháng 10 29, 2025, [https://giaoduc.bitexedu.com/thpt/tai-lieu-thpt/toan-thpt/toan-lop-10/bai-toan-chia-keo-euler/](https://giaoduc.bitexedu.com/thpt/tai-lieu-thpt/toan-thpt/toan-lop-10/bai-toan-chia-keo-euler/)  
-34. Bài toán chia kẹo euler và ứng dụng | Học toán online chất lượng cao 2025 \- Vted, truy cập vào tháng 10 29, 2025, [https://vted.vn/tin-tuc/bai-toan-chia-keo-euler-va-ung-dung-4529.html](https://vted.vn/tin-tuc/bai-toan-chia-keo-euler-va-ung-dung-4529.html)  
-35. Một số dãy số đặc biệt (Fibonacci, Catalan, Euler) \- Viblo, truy cập vào tháng 10 29, 2025, [https://viblo.asia/p/mot-so-day-so-dac-biet-fibonacci-catalan-euler-Az45bq6qlxY](https://viblo.asia/p/mot-so-day-so-dac-biet-fibonacci-catalan-euler-Az45bq6qlxY)  
-36. Số Catalan – Wikipedia tiếng Việt, truy cập vào tháng 10 29, 2025, [https://vi.wikipedia.org/wiki/S%E1%BB%91\_Catalan](https://vi.wikipedia.org/wiki/S%E1%BB%91_Catalan)  
-37. Các kiến thức cơ bản về Tổ hợp (Combinatorics) \- VNOI Wiki, truy cập vào tháng 10 29, 2025, [https://wiki.vnoi.info/translate/he/Number-Theory-5](https://wiki.vnoi.info/translate/he/Number-Theory-5)  
-38. Quy hoạch động bitmask | VNOI Wiki, truy cập vào tháng 10 29, 2025, [https://wiki.vnoi.info/algo/dp/dp-bitmask](https://wiki.vnoi.info/algo/dp/dp-bitmask)  
-39. Quy hoạch động bitmask và bài toán lát gạch \- YouTube, truy cập vào tháng 10 29, 2025, [https://www.youtube.com/watch?v=\_L\_Nh8sH8XE](https://www.youtube.com/watch?v=_L_Nh8sH8XE)  
-40. SOS DP: Giải Mã Quy Hoạch Động Trên Tập Con \- Viblo, truy cập vào tháng 10 29, 2025, [https://viblo.asia/p/sos-dp-giai-ma-quy-hoach-dong-tren-tap-con-pgjLNge8V32](https://viblo.asia/p/sos-dp-giai-ma-quy-hoach-dong-tren-tap-con-pgjLNge8V32)  
-41. Quy hoạch động bitmask Phần 1/2 \- Code Dream, truy cập vào tháng 10 29, 2025, [https://codedream.edu.vn/bitmask\_1/](https://codedream.edu.vn/bitmask_1/)  
-42. Quy hoạch động trên cây \- Viblo, truy cập vào tháng 10 29, 2025, [https://viblo.asia/p/quy-hoach-dong-tren-cay-LzD5d9B4KjY](https://viblo.asia/p/quy-hoach-dong-tren-cay-LzD5d9B4KjY)  
-43. Các thuật toán cây (Tree algorithms) \- Vallicon, truy cập vào tháng 10 29, 2025, [https://vallicon.com/post/c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-c%C3%A2y-(tree-algorithms)-jP9RE8RpaLQ](https://vallicon.com/post/c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-c%C3%A2y-\(tree-algorithms\)-jP9RE8RpaLQ)  
-44. Quy hoạch động trên cây \- Code Dream, truy cập vào tháng 10 29, 2025, [https://codedream.edu.vn/quy-hoach-dong-tren-cay/](https://codedream.edu.vn/quy-hoach-dong-tren-cay/)  
-45. Quy hoạch động chữ số | VNOI Wiki, truy cập vào tháng 10 29, 2025, [https://wiki.vnoi.info/algo/dp/digit-dp](https://wiki.vnoi.info/algo/dp/digit-dp)
